@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Fyra Devdocs",
+  "name": "Fyra Labs Developer Documentation",
   "logo": {
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
@@ -29,14 +29,14 @@
     },
     {
       "name": "Helium",
-      "icon": "toolbox",
+      "icon": "atom",
       "url": "helium"
     }
   ],
   "navigation": [
     {
       "group": "Home",
-      "pages": ["introduction", "features"]
+      "pages": ["introduction"]
     },
     {
       "group": "Terra",
@@ -46,6 +46,48 @@
         "terra/guidelines",
         "terra/installing",
         "terra/policy"
+      ]
+    },
+    {
+      "group": "HIG",
+      "pages": [
+        "helium/hig/introduction",
+        "helium/hig/design-principles",
+        {
+          "group": "Guidelines",
+          "pages": [
+            "helium/hig/guidelines/app-icon",
+            "helium/hig/guidelines/app-naming",
+            "helium/hig/guidelines/colours",
+            "helium/hig/guidelines/standard-keyboard-shortcuts",
+            "helium/hig/guidelines/typography"
+          ]
+        },
+        {
+          "group": "Patterns",
+          "pages": [
+            "helium/hig/patterns/app-bars",
+            "helium/hig/patterns/avatar",
+            "helium/hig/patterns/badges",
+            "helium/hig/patterns/banners",
+            "helium/hig/patterns/bottom-bar",
+            "helium/hig/patterns/buttons",
+            "helium/hig/patterns/chips",
+            "helium/hig/patterns/content-list",
+            "helium/hig/patterns/content-blocks",
+            "helium/hig/patterns/dialog",
+            "helium/hig/patterns/empty-page",
+            "helium/hig/patterns/navigationrail",
+            "helium/hig/patterns/overlay-button",
+            "helium/hig/patterns/sidebars",
+            "helium/hig/patterns/toasts",
+            "helium/hig/patterns/view-chooser",
+            "helium/hig/patterns/view-switcher",
+            "helium/hig/patterns/views",
+            "helium/hig/patterns/welcome-screen",
+            "helium/hig/patterns/windows"
+          ]
+        }
       ]
     }
   ],
