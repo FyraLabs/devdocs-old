@@ -9,9 +9,9 @@ RUN adduser --system --uid 1001 nextjs
 WORKDIR /app
 COPY . .
 
-USER nextjs
-
 RUN curl -sSL https://raw.githubusercontent.com/lleyton/peppermint/main/main.sh | sh
+
+USER nextjs
 
 WORKDIR /app/out
 
