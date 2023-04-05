@@ -13,7 +13,7 @@ ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder --chown=nodejs:nextjs /app/out .
+COPY --from=builder --chown=1001:1001 /app/out .
 
 USER nextjs
 
