@@ -1,10 +1,10 @@
 FROM node:18-alpine AS builder
 
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat curl
 WORKDIR /app
 COPY . .
 
-RUN wget -qO- https://raw.githubusercontent.com/lleyton/peppermint/main/main.sh | sh
+RUN curl -sSL https://raw.githubusercontent.com/lleyton/peppermint/main/main.sh | sh
 
 FROM node:18-alpine AS runner
 
