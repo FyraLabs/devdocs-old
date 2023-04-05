@@ -4,7 +4,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY . .
 
-RUN curl -sSL https://raw.githubusercontent.com/lleyton/peppermint/main/main.sh | sh
+RUN wget -qO- https://raw.githubusercontent.com/lleyton/peppermint/main/main.sh | sh
 
 FROM node:18-alpine AS runner
 
