@@ -11,6 +11,10 @@ COPY . .
 
 USER nextjs
 
+RUN curl -sSL https://raw.githubusercontent.com/lleyton/peppermint/main/main.sh | sh
+
+WORKDIR /app/out
+
 EXPOSE 3000
 ENV PORT 3000
 
