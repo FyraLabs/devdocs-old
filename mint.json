@@ -1,22 +1,17 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Fyra Labs Developer Documentation",
+  "name": "Fyra Developer",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0069ED",
-    "light": "#4D9CFF",
-    "dark": "#0050B4"
+    "primary": "#9333ea",
+    "light": "#c084fc",
+    "dark": "#7e22ce"
   },
-  "topbarLinks": [
-    {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
-    }
-  ],
+  "topbarLinks": [],
   "topbarCtaButton": {
     "name": "Get Started",
     "url": "https://github.com/mintlify/starter"
