@@ -136,6 +136,7 @@ anda build -c anda-37-x86_64 anda/fonts/lovelyfonttype-fonts/pkg
 - You don't need to create `pkg`. It's not supposed to exist
 - Modify the architecture to match your machine
 - If the package fails to build, fix your spec file accordingly
+- The built RPM will be inside `anda-build/`
 
 ## Done?
 
@@ -143,6 +144,8 @@ anda build -c anda-37-x86_64 anda/fonts/lovelyfonttype-fonts/pkg
 - Create a pull request that merges to the `main` branch
 
 ## Automatic updates
+
+The system regarding automatic updates [are described here](autoupdate).
 
 [Andaman] supports updating via `.rhai` packages.
 See the "book" (more like guide) for [Rhai](https://rhai.rs/book/).
