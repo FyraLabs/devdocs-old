@@ -70,10 +70,10 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
+            type=schedule
             type=ref,event=branch
             type=ref,event=pr
-            type=schedule,pattern={{date 'X'}}
-            type=ref,event=branch,pattern={{date 'X'}}
+            type=raw,value={{ date 'X' }},enable={{is_default_branch}}
 
       - name: Set current time as env variable
         run: echo "NOW=$(date +%s)" >> $GITHUB_ENV
