@@ -69,6 +69,11 @@ jobs:
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=schedule,pattern={{date 'X'}}
+            type=ref,event=branch,pattern={{date 'X'}}
 
       - name: Set current time as env variable
         run: echo "NOW=$(date +%s)" >> $GITHUB_ENV
@@ -81,9 +86,7 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: |
-            ${{ steps.meta.outputs.tags }}
-            ${{ ((github.event_name == 'schedule' || github.event_name == 'push') && github.ref_name == 'main') && format('{0}/{1}:v{2}', env.REGISTRY, env.IMAGE_NAME, env.NOW) || '' }}
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
