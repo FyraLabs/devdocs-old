@@ -66,14 +66,14 @@ jobs:
       # https://github.com/docker/metadata-action
       - name: Extract Docker metadata
         id: meta
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        uses: docker/metadata-action@v4.4.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=schedule
             type=ref,event=branch
             type=ref,event=pr
-            type=raw,value={{ date 'X' }},enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
+            type=raw,value={{ date 'X' }},enable={{is_default_branch}}
 
       - name: Set current time as env variable
         run: echo "NOW=$(date +%s)" >> $GITHUB_ENV
