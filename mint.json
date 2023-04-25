@@ -37,6 +37,7 @@
       "group": "Terra",
       "pages": [
         "terra/contributing",
+        "terra/autoupdate",
         "terra/faq",
         "terra/guidelines",
         "terra/installing",
