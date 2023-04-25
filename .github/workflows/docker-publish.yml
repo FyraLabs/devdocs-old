@@ -73,7 +73,7 @@ jobs:
             type=schedule
             type=ref,event=branch
             type=ref,event=pr
-            type=raw,value={{ date 'X' }},enable={{is_default_branch}}
+            type=raw,value={{ date 'X' }},enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
 
       - name: Set current time as env variable
         run: echo "NOW=$(date +%s)" >> $GITHUB_ENV
