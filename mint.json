@@ -11,6 +11,12 @@
     "light": "#c084fc",
     "dark": "#7e22ce"
   },
+  "analytics": {
+    "plausible": {
+      "domain": "developer.fyralabs.com",
+      "script": "https://anyawytics.fyralabs.com/js/script.js"
+    }
+  },
   "topbarLinks": [],
   "topbarCtaButton": {
     "name": "Join our Discord",
