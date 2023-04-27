@@ -33,8 +33,6 @@ Remember, it takes effort to create a package. If you ever need help, hop into
   - multiple archives are ok
   - non `.tar.gz` archives are also ok, but might require additional build dependencies
   - we also prefer archives from git repositories
-    > ℹ️ Prefer upstream that are not Github but provides an API for fetching latest version, such as Gitlab, crates.io, Pypi, etc.
-    > This is because Github has an API rate-limit.
 
 ### Writing sources
 
@@ -145,17 +143,27 @@ anda build -c anda-37-x86_64 anda/fonts/lovelyfonttype-fonts/pkg
 
 ## Automatic updates
 
-The system regarding automatic updates [are described here](autoupdate).
+The system regarding automatic updates [are described here](autoupdate). Here is an overview:
 
 [Andaman] supports updating via `.rhai` packages.
 See the "book" (more like guide) for [Rhai](https://rhai.rs/book/).
 
 - Create `update.rhai` inside the package folder.
 - See references from other packages.
-  - WARN: Remember to add semicolons! (`;`)
-- NOTE: Anda defaults the filename to `update.rhai`.
-  If it's not `update.rhai`, add a new entry inside `anda.hcl` `rpm {}`: `update = "path/to/update.rhai"`.
 - You also need to add `labels { nightly = "1" }` in anda.hcl for nightly packages.
+<Warning>Remember to add semicolons in Rhai scripts! (`;`)</Warning>
+<Note>
+  Anda defaults the filename to `update.rhai`.
+  If it's not `update.rhai`, add a new entry inside `anda.hcl`:
+  ```hcl
+  project pkg {
+    rpm {
+      update = "path/to/update.rhai"
+      ...
+    }
+  }
+  ```
+</Note>
 
 ## SRPM Macros
 
