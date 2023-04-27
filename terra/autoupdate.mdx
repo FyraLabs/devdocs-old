@@ -19,7 +19,7 @@ Put your Rhai script in `update.rhai` next to the corresponding `anda.hcl` file.
 let ver = gh("FyraLabs/subatomic"); // gets latest version from GitHub
 rpm.version(ver); // updates the version in the spec file using `ver`
 ```
-**WARN: you need SEMICOLONS! (`;`)**
+<Warning>you need SEMICOLONS! (`;`)</Warning>
 
 Updates are triggered every 30 minutes using the command `anda update -vv`. However, nightly packages are updated every 24 hours using
 `anda update -vv --filters nightly=1`. Their `anda.hcl` files should look something like this:
