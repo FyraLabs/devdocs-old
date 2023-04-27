@@ -144,6 +144,12 @@ lua
 Then HeadPAT will look for `pat.lua` in the same directory.
 However, it is uncertain if the above will be the actual format as HeadPAT is still under heavy (but slow) development.
 
+# Guidelines
+<Tip>
+  Avoid using the <Tooltip tip="This includes gh() and gh_tag()">GitHub API</Tooltip> for fetching the latest versions.
+  You may use GitLab, crates.io, Pypi, etc. instead.
+  This is because GitHub has an API rate-limit.
+</Tip>
 
 [rhai]: https://rhai.rs/
 [headpat]: https://github.com/terrapkg/headpat
