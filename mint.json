@@ -32,6 +32,11 @@
       "name": "Helium",
       "icon": "atom",
       "url": "helium"
+    },
+    {
+      "name": "Katsu",
+      "icon": "bowl-food",
+      "url": "katsu"
     }
   ],
   "navigation": [
@@ -91,6 +96,15 @@
             "helium/hig/patterns/windows"
           ]
         }
+      ]
+    },
+    {
+      "group": "Katsu",
+      "pages": [
+        "katsu/introduction",
+        "katsu/installation",
+        "katsu/usage",
+        "katsu/configuration"
       ]
     }
   ],
