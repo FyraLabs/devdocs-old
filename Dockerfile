@@ -2,7 +2,7 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 COPY . .
 
-RUN rm -rf .git .gitignore Dockerfile
+RUN rm -rf .git .gitignore Dockerfile # Mintlify decides that these files are "static content"
 
 RUN apk add --no-cache libc6-compat curl
 RUN curl -sSL https://raw.githubusercontent.com/lleyton/peppermint/main/main.sh | sh
