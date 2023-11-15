@@ -1,0 +1,14 @@
+---
+name: Usage
+description: Using Katsu to build images
+---
+
+To build an image, you need to create a YAML "Manifest" file. This file describes the partition layout
+(if you are building a disk image), packages to install, and scripts to run during the build process.
+
+
+To run Katsu, you simply need to specify the entrypoint manifest file, along with the desired output format:
+
+```bash
+katsu build -o disk-image manifest.yaml
+```
